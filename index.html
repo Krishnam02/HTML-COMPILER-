@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡Code Editor</h1>
+            <button id="theme-toggle">🌙 Toggle Theme</button>
+        </header>
+
+        <div class="editor-container">
+            <div class="code-section">
+                <h2>📜 Code Here</h2>
+                <textarea id="html-code" placeholder="HTML Code"></textarea>
+                <textarea id="css-code" placeholder="CSS Code"></textarea>
+                <textarea id="js-code" placeholder="JavaScript Code"></textarea>
+            </div>
+            <div class="preview-section">
+                <h2>✨ Live Preview</h2>
+                <iframe id="preview"></iframe>
+                <div id="error-console">🚨 Errors will appear here</div>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button onclick="runCode()">▶ Run Code</button>
+            <button onclick="saveCode()">💾 Save Project</button>
+            <button onclick="loadLastCode()">📂 Load Last Project</button>
+        </div>
+
+        <div class="history">
+            <h2>📜 Saved Projects</h2>
+            <div id="history-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
